@@ -1,6 +1,10 @@
 import random
 
-alunos = ['Lucas', 'Gabriel', 'Helena', 'Rafael',
-           'Bianca', 'Leonardo']
+alunos = []
+limite_alunos = int(input('Quantos alunos tem?: '))
 
-print(f'Aluno escolhido: {random.choice(alunos)}')
+while len(alunos) in range(limite_alunos):
+    nome = input('Escolha Qual o nome do aluno?: ')
+    alunos.append(nome)
+
+print(f'O aluno escolhido foi: {random.choice(alunos)}')
