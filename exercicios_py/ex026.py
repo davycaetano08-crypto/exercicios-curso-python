@@ -1,7 +1,7 @@
 nome = input('Digite seu nome completo: ')
-teste =(nome.find('Silva'))
+se_tem_nome =(nome.find('Silva'))
 
-if teste != -1:
+if se_tem_nome != -1:
     print(f'Seu nome ({nome}) tem Silva')
 else:
     print(f'Seu nome ({nome}) não tem Silva')
