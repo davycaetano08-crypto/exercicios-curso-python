@@ -31,10 +31,11 @@ for i in range(1, limite_notas + 1):
 m = sum(notas) / len(notas)
 
 if m == 10:
-    print(f'Sua média foi {m}! Parabéns')
+    print(f'Sua média foi \033[1;32m{m:.1f}\033[m! Parabéns')
 elif m >= 8:
-    print(f'Sua média foi {m}! Praticamente perfeito')
+    print(f'Sua média foi \033[1;32m{m:.1f}\033[m! Praticamente perfeito')
 elif m >= 6:
-    print(f'Sua média foi {m} Pode melhorar')
+    print(f'Sua média foi \033[1;33m{m:.1f}\033[m Pode melhorar')
 else:
-    print(f'Sua média foi {m}.....')
+    print(f'Sua média foi \033[1;31m{m:.1f}\033[m.....')
+

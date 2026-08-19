@@ -7,4 +7,4 @@ for i in range(1, limite_notas + 1):
 
 avg = sum(lista_notas) / len(lista_notas)
 
-print(f'A média de todas as suas notas é: {avg:.2}')
+print(f'A média de todas as suas \033[1;32mnotas é: {avg:.2}\033[m')
