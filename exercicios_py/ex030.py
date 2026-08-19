@@ -7,3 +7,4 @@ elif velo_car < limite_via * 0.5:
     print(f'Aplique uma multa de R$125,00')
 else:
     print('Deixe seguir, o motorista estava dentro do limite')
+    

@@ -10,4 +10,3 @@ print(nome.upper())
 print(nome.lower())
 print(f'O seu nome tem um total de {len(nome.replace(' ', ''))} letras')
 print(f'O seu primeiro nome tem {len(nome_sep[0])} letras')
-
