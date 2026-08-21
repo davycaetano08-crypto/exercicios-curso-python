@@ -1,6 +1,6 @@
 idade = int(input('Digite sua idade: '))
 
-if idade == 0:
+if idade <= 0:
     print('idade Inválida')
 elif idade <= 9:
     print('Sua categoria é Mirim')

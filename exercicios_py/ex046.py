@@ -25,3 +25,4 @@ else:
             print(f'{vez_pc}!\nParabéns, você ganhou!')
         else:
             print(f'{vez_pc}!\nQue pena, empatamos!')
+            

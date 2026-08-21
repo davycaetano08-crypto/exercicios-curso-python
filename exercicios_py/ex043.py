@@ -2,22 +2,22 @@ a = float(input('Digite o valor do 1° lado do triângulo:\n'))
 b = float(input('Digite o valor do 2° lado do triângulo:\n'))
 c = float(input('Digite o valor do 3° lado do triângulo:\n'))
 
-def is_triangulo(a, b, c): # checa se realmente é um triângulo
-    if a < b + c and b < a + c and c < b + a:
-        print(f'Os lados {a}, {b} e {c} podem formar um triângulo')
-        return True
-    else:
-        print(f'Os lados {a}, {b} e {c} \033[31;40mnão\033[m podem formar um triângulo')
+def is_triangle(a, b, c): # checa se realmente é um triângulo
+    if a <= 0 or b <= 0 or c <= 0:
         return False
+    return a < b + c and b < a + c and c < b + a
 
-def get_tipo_triangulo(a, b, c): #determina o tipo do triângulo
-    if a == c and b == c:
-        print('Este é um triângulo equilátero!')
+def get_triangle_type(a, b, c): #determina o tipo do triângulo
+    if a == b == c:
+        print('equilátero!')
     elif (a == c) or (b == c) or (a == b):
-        print('este é um triângulo isóceles')
+        print('isóceles!')
     else:
-        print('Este é um triângulo escaleno')
+        print('escaleno!')
 
 
-if is_triangulo(a, b, c) == True:
-    get_tipo_triangulo(a, b, c)
+if is_triangle(a, b, c):
+    print(f'Os lados {a}, {b}, {c} podem formar um triângulo {get_triangle_type(a, b, c)}')
+else:
+    print(f'Os lados {a}, {b}, {c} não podem formar um triângulo')
+    

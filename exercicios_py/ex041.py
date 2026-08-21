@@ -7,11 +7,9 @@ for i in range(1, limite_notas + 1):
 
 m = sum(notas) / len(notas)
 
-if m == 10:
-    print(f'Sua média foi \033[1;32m{m:.1f}\033[m! Parabéns')
-elif m >= 8:
-    print(f'Sua média foi \033[1;32m{m:.1f}\033[m! Praticamente perfeito')
-elif m >= 6:
-    print(f'Sua média foi \033[1;33m{m:.1f}\033[m Pode melhorar')
+if 7 > m >= 5:
+    print(f'Com uma média de {m:.1f}, você ficou de recuperação!')
+elif m >= 7:
+    print(f'Com uma média de {m:.1f}, Você passou direto!')
 else:
-    print(f'Sua média foi \033[1;31m{m:.1f}\033[m.....')
+    print(f'Com uma média de {m:.1f}, Você está reprovado!')

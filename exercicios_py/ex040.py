@@ -4,8 +4,8 @@ ano_nasc = int(input('digite o ano em que nasceu: '))
 diff_idade = date.today().year - ano_nasc
 
 if diff_idade < 18:
-    print(f'Você com {diff_idade} anos, ainda terá que se alistar, daqui a {18 - diff_idade} ano(s)')
+    print(f'Você com {diff_idade} anos, ainda terá que se alistar, daqui a {18 - diff_idade} ano(s)!\nSeu alistamento será em {date.today().year + (18 - diff_idade)}')
 elif diff_idade == 18:
     print(f'Você já tem {diff_idade} anos, ta na hora de se alistar!')
 else:
-    print(f'Se você ainda não se alistou, perdeu o prazo por {diff_idade - 18} anos')
+    print(f'Se você ainda não se alistou, perdeu o prazo por {diff_idade - 18} ano(s)!\nSeu alistamento foi em {date.today().year - (diff_idade - 18)}')
