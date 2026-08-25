@@ -1,9 +1,9 @@
 from random import choice
 
-valores = ['Pedra', 'Papel', 'Tesoura']
+valores = ('Pedra', 'Papel', 'Tesoura')
 vez_pc = choice(valores)
-print(vez_pc)
-vez_jog = input('Escolha uma jogada:\n Pedra, Papel ou tesoura: ').capitalize()
+
+vez_jog = input('Escolha uma jogada:\n Pedra, Papel ou Tesoura: ').capitalize()
 
 if vez_pc == valores[0] and vez_jog == valores[1]:
     print(f'{vez_pc}!\nParabéns, você ganhou!')

@@ -21,6 +21,7 @@ else:
 print(f'Olá {nome}.')
 '''
 
+'''
 notas = []
 limite_notas = int(input('Quantas notas teve?: '))
 
@@ -38,3 +39,8 @@ elif m >= 6:
     print(f'Sua média foi \033[1;33m{m:.1f}\033[m Pode melhorar')
 else:
     print(f'Sua média foi \033[1;31m{m:.1f}\033[m.....')
+
+'''
+
+for c in range(1, 5):
+    print(f'{c}c')
