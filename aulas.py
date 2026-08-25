@@ -1,4 +1,5 @@
 import time
+import random
 
 '''
 tempo = int(input('Quanto ano tem seu carro?: '))
@@ -41,6 +42,11 @@ else:
     print(f'Sua média foi \033[1;31m{m:.1f}\033[m.....')
 
 '''
+'''
+for i in range(0, 7, 2):
+    print(i)
+print('Fim')
+'''
+import math
 
-for c in range(1, 5):
-    print(f'{c}c')
+print(int((2.2360679775)))
