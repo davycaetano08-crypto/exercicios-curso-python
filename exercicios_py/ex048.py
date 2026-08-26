@@ -1,3 +1,5 @@
-for i in range(1, 51):
-    if i % 2 == 0:
-        print(f'{i} é par!')
+num = int(input('Digite um número:\n'))
+
+for i in range(2, num + 1, 2):
+    print(i, end=' ')
+print('acabou')

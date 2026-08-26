@@ -9,15 +9,22 @@ def is_triangle(a, b, c): # checa se realmente é um triângulo
 
 def get_triangle_type(a, b, c): #determina o tipo do triângulo
     if a == b == c:
-        print('equilátero!')
+        return 'equilátero!'
     elif (a == c) or (b == c) or (a == b):
-        print('isóceles!')
+        return 'isóceles!'
     else:
-        print('escaleno!')
+        return 'escaleno!'
 
+s = 0
 
 if is_triangle(a, b, c):
     print(f'Os lados {a}, {b}, {c} podem formar um triângulo {get_triangle_type(a, b, c)}')
+    for i in (a, b, c):
+        s += i
+    if s % 2 == 0:
+        print('O perímetro é par!')
+    else:
+        print('O perímetro é ímpar!')
 else:
     print(f'Os lados {a}, {b}, {c} não podem formar um triângulo')
     
