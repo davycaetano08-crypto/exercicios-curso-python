@@ -4,6 +4,9 @@ print(f'{' Estouro de fogos ':=^30}')
 sleep(0.5)
 
 for i in range(10, 0, -1):
-    print(f'Os estouros acontecem em {i}')
+    if i >= 10:
+        print(f'Os estouros acontecem em {i}')
+    else:
+        print(i)
     sleep(1)
 print('Estouros!!!!!')
