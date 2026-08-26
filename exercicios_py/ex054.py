@@ -1,7 +1,6 @@
-a = 'anotaram a data da maratona'
-a = a.replace(' ', '')
+palavra = input('Digite uma frase: ').strip().replace(' ', '').lower()
 
-if a == a[::-1]:
-    print(f'{a} é um palíndromo.')
+if palavra == palavra[::-1]:
+    print(f'{palavra} é um palíndromo.')
 else:
-    print(f'{a}não é um palíndromo')
+    print(f'{palavra} não é um palíndromo')

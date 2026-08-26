@@ -47,6 +47,8 @@ for i in range(0, 7, 2):
     print(i)
 print('Fim')
 '''
-import math
 
-print(int((2.2360679775)))
+c = 1
+while c != 11:
+    print(c)
+    c += 1 

@@ -1,18 +1,23 @@
-cadastro = []
+femi_menor_20 = 0
+idades = 0
+max_idade = 0
 
-for i in range(3):
-    nome = input('Digite seu nome: ').capitalize()
-    idade = int(input('Digite sua idade: '))
-    sexo = input('Digite seu sexo: ').capitalize()
+for i in range(1, 5):
+    print(f'{f'{i}° Pessoa':-^20}')
 
-    dados_pessoa = {
-        "name": nome,
-        "age": idade,
-        'sex': sexo
-    }
+    nome = input('Nome: ').capitalize().strip()
+    idade = int(input('Idade: '))
+    sexo = input('Sexo: ').upper().strip()
 
-    cadastro.append(dados_pessoa)
-    print('Pessoa Cadastrada!')
+    idades += idade
 
-for c in cadastro:
-    print({c['name']}, {c['age']}, {c['sex']})
+    if idade > max_idade and sexo == "M":
+        max_idade = idade
+        nome_h = nome
+
+    if idade < 20 and sexo == 'F':
+        femi_menor_20 += 1
+
+print(f'O homem mais velho é o {nome_h}, com {max_idade} anos')
+print(f'A média de idade é {(idades / 4):.1f}')
+print(f'A quantidade de mulheres com menos de 20 anos é {femi_menor_20}')
