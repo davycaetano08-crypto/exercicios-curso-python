@@ -4,13 +4,12 @@ term = int(input('Quantos termos da sequência quer ver?: '))
 cont = soma = 0
 
 if term == 1:
-    print(f'{anterior}, {atual}')
+    print(anterior, atual)
 else:
-    print(anterior)
-    print(atual)
+    print(f'{anterior} {atual}', end=' ')
     while cont < term:
         soma = anterior + atual
+        print(f'{soma}', end=' ')
         anterior = atual
         atual = soma
-        print(soma)
         cont += 1

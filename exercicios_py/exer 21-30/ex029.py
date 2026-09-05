@@ -17,3 +17,4 @@ for i in range(1, 6):
         print('Foi quase, o número é menor')
 else:
     print(f'Sua tentativas acabaram! o número era {num}')
+    

@@ -16,4 +16,5 @@ while True:
     else:
         print('Tá quase, o número é menor!')
         quant += 1
+
 print(f'Você acertou o número: {num} em {quant} tentativas')

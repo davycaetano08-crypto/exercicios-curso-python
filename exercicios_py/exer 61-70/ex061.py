@@ -1,9 +1,11 @@
 num = int(input('Digite um número: '))
 factorial = 1
-num_reg = num
+c = num
 
-while num != 0:
-    factorial = num * factorial
-    num -= 1
+while c > 0:
+    print(f'{c}', end='')
+    print(' x ' if c > 1 else ' = ', end='')
+    factorial *= c
+    c -= 1
 
-print(f'O fatorial de {num_reg} é: {factorial}')
+print(factorial)

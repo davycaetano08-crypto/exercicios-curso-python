@@ -15,8 +15,8 @@ while limite != 0:
                 TermAtu += razao
                 cont += 1
         else:
-            esco = int(input('Quantos termos a mais que ver?: '))
-            if esco != 0:
-                limite += esco
+            mais = int(input('Quantos termos a mais que ver?: '))
+            if mais != 0:
+                limite += mais
             else:
                 break
