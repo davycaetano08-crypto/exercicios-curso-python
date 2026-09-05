@@ -1,4 +1,3 @@
-
 first_term = int(input('Digite o primeiro termo: '))
 r = int(input('Digite a razão: '))
 dec = first_term + (10 - 1) * r
