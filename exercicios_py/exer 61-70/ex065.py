@@ -13,10 +13,17 @@ while True:
             menor = num
         soma += num
         cont += 1
-    esco = input('Quer contiuar? (S/N): ').upper().strip()
-    if esco == 'S':
+
+    while True:
+        esco = input('Quer contiuar? (S/N): ').upper().strip()
+        if esco in ['Sim', 'Não']:
+            break
+        else:
+            continue
+
+    if esco in 'Sim':
         continue
     else:
-        break
+        break            
 
 print(f'O maior número foi {maior}, o menor foi {menor} e a média {soma / cont}')

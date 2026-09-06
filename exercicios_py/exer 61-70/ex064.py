@@ -1,7 +1,6 @@
 lista = []
-
 while True:
-    num = int(input('Digite um número, digite 999 para sair: '))
+    num = int(input('Digite um número, (999 para sair): '))
     if num != 999:
         lista.append(num)
     else:
