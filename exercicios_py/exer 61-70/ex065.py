@@ -14,10 +14,10 @@ while True:
             menor = num
         soma += num
         cont += 1
-    esco = input('Quer contiuar? (S/N): ').upper()
+    esco = input('Quer contiuar? (S/N): ').upper().strip()
     if esco == 'S':
         continue
     else:
         break
 
-print(f'O maio número foi {maior}, o menor foi {menor} e a média {soma / cont}')
+print(f'O maior número foi {maior}, o menor foi {menor} e a média {soma / cont}')
