@@ -3,8 +3,7 @@ maior = cont = menor = soma = 0
 while True:
     num = int(input('Digite um número: '))
     if cont == 0:
-        maior = num
-        menor = num
+        maior = menor = num
         cont += 1
         soma += num
     else:
