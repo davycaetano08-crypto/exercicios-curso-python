@@ -5,8 +5,6 @@ num_02= int(input('Segundo número: '))
 
 if num_02 < 0:
     num_02 = num_02 * -1
-else:
-    pass
 
 soma = num_02 + num_01
 
