@@ -1,8 +1,15 @@
 classific = ('Flamengo', 'Palmeiras', 'Athletico-PR', 'Fluminense', 'Bahia', 'Cruzeiro', 'Coritiba', 'Atlético-MG', 'Red Bull Bragantino', 'São Paulo', 'Vitória', 'Corinthians', 'Santos', 'Botafogo', 'Grêmio', 'Mirassol', 'Vasco', 'Internacional', 'Remo', 'Chapecoense')
 
+# print(f'Lista de classificação brasileirão série A: {classific}')
+for t in classific:
+    if t != classific[-1]:
+        print(t, end=', ')
+    else:
+        print(t)
+
 
 while True:
-    opc = int(input('[1]: top 5\n[2]: últimos 4\n[3]: Ordem alfabética\n[4]: posição time\n[0]: Sair\n'))
+    opc = int(input('\n[1]: top 5\n[2]: últimos 4\n[3]: Ordem alfabética\n[4]: posição time\n[0]: Sair\n'))
     if opc == 1:
         for i, time in enumerate(classific[:5]):
             print(f'{i + 1}°', time)

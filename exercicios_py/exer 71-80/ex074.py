@@ -1,12 +1,6 @@
 from random import randint
 
-n1 = randint(1, 10)
-n2 = randint(1, 10)
-n3 = randint(1, 10)
-n4 = randint(1, 10)
-n5 = randint(1, 10)
-
-numeros = (n1, n2, n3, n4, n5)
+numeros = (randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10), randint(1, 10))
 
 for i in numeros:
     print(i, end=' ')
