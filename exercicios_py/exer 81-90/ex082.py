@@ -1,26 +1,27 @@
-numeros = []
+num = []
+
 while True:
-    num = int(input('Digite um número: '))
-    numeros.append(num)
+    n = int(input('Digite um número: '))
+    num.append(n)
 
     while True:
-        esco = input('Quer continuar?: ').strip().upper()[0]
+        esco = input('Quer continuar? (S/N): ').strip().upper()[0]
 
         if esco in ['S', 'N']:
             break
         else:
-            print('Escolha inválida')
+            print('Input inválido')
 
     if esco == 'N':
         break
-
-impar = [] 
+    
 par = []
+impar = []
 
-for i in numeros:
+for i in num:
     if i % 2 == 0:
         par.append(i)
     else:
         impar.append(i)
 
-print(f'Todos os números: {numeros}\nNúmeros pares: {par}\nÍmpares: {impar}')
+print(f'Valores digitados: {num}\nValores pares: {par}\nValores ímpares: {impar}')
