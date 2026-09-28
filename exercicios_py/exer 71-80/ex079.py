@@ -1,24 +1,29 @@
-vlrs = []
+valores = []
 
 while True:
-    num = int(input('Digite um número: '))
-    if num not in vlrs:
-        vlrs.append(num)
-    else:
-        print('número já digitado!')
-        continue
+    try:
+        num = int(input('Digite um valor: '))
 
-    while True:
-        esco = input('Quer continuar? (S/N): ').strip().upper()[0]
-
-        if esco in ['S', 'N']:
-            break
+        if num not in valores:
+            valores.append(num)
         else:
-            print('Escolha inválida')
+            print('Valor já digitado: ')
 
-    if esco == 'N':
-        break
+        while True:
+            try:
+                esco = input('Quer continuar? (S/N): ').strip().capitalize()[0]
 
-print('Valores digitados:', end=' ')
-for i in sorted(vlrs):
-    print(i, end=' ')
+                if esco in ['S', 'N']:
+                    break
+                else:
+                    print('Valor inválido!')
+            except IndexError:
+                print('Digite algo por favor!')
+
+        if esco == 'N':
+            break
+    except ValueError:
+        print('Digite algo!')
+
+valores.sort()
+print(f'Valores digitados: {valores}')

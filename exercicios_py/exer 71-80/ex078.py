@@ -1,15 +1,14 @@
-numeros = []
+num = []
 
-for i in range(5):
-    num = int(input('Digite um número: '))
-    numeros.append(num)
+for _ in range(4):
+    num.append(int(input('Digite um valor: ')))
 
-print(f'O maior número é: {max(numeros)}, nas posições:', end=' ')
-for c, n in enumerate(numeros):
-    if n == max(numeros):
+
+print(f'O maior número digitado foi: {max(num)}, nas posições: ', end=' ')
+for c, i in enumerate(num):
+    if i == max(num):
         print(c, end=' ')
-
-print(f'\n O menor número é: {min(numeros)}, nas posições:', end=' ')
-for c, n in enumerate(numeros):
-    if n == min(numeros):
+print(f'\nO menor número digitado foi: {min(num)}, nas posições: ', end=' ')
+for c, i in enumerate(num):
+    if i == min(num):
         print(c, end=' ')

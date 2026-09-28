@@ -23,7 +23,6 @@ while True:
             break
         else:
             print('Input inválido')
-            continue
 
     if choice == 'N':
         break
