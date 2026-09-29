@@ -1,17 +1,14 @@
-expr = input('Digite a expressão: ').strip().replace(' ', '')
-pilha = []
+parent = []
 
-for i in expr:
+expre = input('Digite uma expressão: ').strip().replace(' ', '')
+
+for i in expre:
     if i == '(':
-        pilha.append(i)
+        parent.append(i)
     elif i == ')':
-        if len(pilha) > 0:
-            pilha.pop()
-        else:
-            pilha.append(i)
-            break
+        parent.pop()
 
-if len(pilha) == 0:
-    print(f'A expressão: {expr} é válida!')
+if len(parent) > 0:
+    print(f'A operação {expre} é inválida!')
 else:
-    print(f'A expressão: {expr} é inválida!')    
+    print(f'A operação {expre} é válida')

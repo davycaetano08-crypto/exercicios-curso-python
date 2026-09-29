@@ -18,7 +18,7 @@ while True:
                 else:
                     print('Valor inválido!')
             except IndexError:
-                print('Digite algo por favor!')
+                print('Digite algo!')
 
         if esco == 'N':
             break

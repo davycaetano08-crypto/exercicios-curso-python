@@ -1,25 +1,30 @@
-numeros = []
+valores = []
 
 while True:
-    num = int(input('Digite um número: '))
-    numeros.append(num)
+    num = int(input('Digite um valor: '))
+    valores.append(num)
 
     while True:
-        esco = input('Quer continuar?: ').strip().upper()[0]
+        esco = input('Quer continuar? (S/N): ').strip().capitalize()
 
         if esco in ['S', 'N']:
             break
         else:
-            print('escolha inválida!')
+            print('Input inválido!')
 
     if esco == 'N':
         break
-print(f'Você digitou {len(numeros)} números')
 
-if 5 in numeros:
-    print(f'O número 5 apareceu na posição {numeros.index(5)}')
+valores_inver = valores[:]
+valores_inver.sort(reverse=True)
+
+print(f'Quantidade de alores digitados: {len(valores)}')
+print(f'Valores em ordem decrescente: {valores_inver}')
+
+if 5 in valores:
+    print('O número 5 está na lista, nas posições: ', end=' ')
+    for c, i in enumerate(valores):
+        if i == 5:
+            print(c, end=' ')
 else:
-    print('O número 5 não foi digitado')
-
-numeros.sort(reverse=True)
-print(f'Lista em ordem decrescente: {numeros}')
+    print('O número 5 não está na lista')
