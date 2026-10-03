@@ -1,11 +1,11 @@
-pessoas, dado = [], []
-maior_pes, menor_pes = 0, 0
+pessoas, dados = [], []
+maior_pes = menor_pes = 0
 
 while True:
-    dado.append(input('Nome: '))
-    dado.append(float(input('Peso: ')))
-    pessoas.append(dado[:])
-    dado.clear()
+    dados.append(input('Nome: '))
+    dados.append(float(input('Peso: ')))
+    pessoas.append(dados[:])
+    dados.clear()
 
     while True:
         esco = input('Quer continuar?: ').strip().capitalize()[0]
@@ -21,20 +21,18 @@ for c, i in enumerate(pessoas):
         maior_pes = i[1]
         menor_pes = i[1]
     else:
-        if i[1] >= maior_pes:
+        if i[1] > maior_pes:
             maior_pes = i[1]
-        elif i[1] <= menor_pes:
+        elif i[1] < menor_pes:
             menor_pes = i[1]
 
-pessoas_mais_pes, pessoas_mais_lev = [], []
-
-for i in pessoas:
-    if i[1] == maior_pes:
-        pessoas_mais_pes.append(i[0])
-    elif i[1] == menor_pes:
-        pessoas_mais_lev.append(i[0])
-
-
 print(f'Quantidade de pessoas: {len(pessoas)}')
-print(f'Pessoas mais pesadas ({maior_pes}KG): {pessoas_mais_pes}')
-print(f'Pessoas mais leves ({menor_pes}KG): {pessoas_mais_lev}')
+print(f'Pessoas mais pesadas ({maior_pes}Kg):', end=' ')
+for p in pessoas:
+    if p[1] == maior_pes:
+        print(f'[{p[0]}]', end=' ')
+
+print(f'\nPessoas mais leves ({menor_pes}Kg):', end=' ')
+for p in pessoas:
+    if p[1] == menor_pes:
+        print(f'[{p[0]}]', end=' ')
