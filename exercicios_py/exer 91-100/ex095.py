@@ -7,20 +7,19 @@ while True:
     for i in range(1, quantt_part + 1):
         gols.append(int(input(f'Quantidade de gols na partida {i}: ')))
     jogador['gols'] = gols[:]
-    jogador['total'] = len(gols)
+    jogador['total'] = sum(gols)
     jogadores.append(jogador.copy())
     gols.clear()
 
     while True:
-        jog = input('Quer continuar?: ').strip().capitalize()[0]
+        resp = input('Quer continuar?: ').strip().capitalize()[0]
 
-        if jog in ['S', 'N']:
+        if resp in ['S', 'N']:
             break
         else:
             print('Opção inválida!')
-    if jog == 'N':
+    if resp == 'N':
         break
-
     
 for j in jogadores:
     for k, v in j.items():
@@ -32,7 +31,7 @@ while True:
 
     for p in jogadores:
         if jog == p['Nome']:
-            print(f'O jogador {p["Nome"]} jogou {p["total"]} jogos\n')
+            print(f'O jogador {p["Nome"]} jogou {len(p["gols"])} jogos\n')
             for c, i in enumerate(p['gols']):
                 print(f'Na partida {c + 1}, o jogador marcou {i} gols')
 
@@ -46,3 +45,4 @@ while True:
 
     if esco == 'N':
         break
+    

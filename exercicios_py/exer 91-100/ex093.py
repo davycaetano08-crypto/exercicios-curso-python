@@ -5,7 +5,8 @@ quantt_part = int(input('Quantidade de partidas: '))
 
 for i in range(1, quantt_part + 1):
     gols.append(int(input(f'Quantidade de gols na {i}° partida: ')))
-jogador['gols'] = gols
+
+jogador['gols'] = gols[:]
 jogador['total'] = sum(gols)
 print()
 
